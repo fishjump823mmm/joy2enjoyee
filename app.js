@@ -3,6 +3,12 @@ const dialogBody = document.querySelector('#dialog-body');
 const dialogIndex = document.querySelector('#dialog-index');
 const toast = document.querySelector('.toast');
 
+const mainContent = document.querySelector('main');
+['projects', 'aigc', 'video', 'photo'].forEach((sectionId) => {
+  const section = document.getElementById(sectionId);
+  if (section) mainContent.append(section);
+});
+
 const directoryStage = document.querySelector('.directory-stage');
 const directoryItems = [...document.querySelectorAll('[data-directory-item]')];
 const directoryDots = [...document.querySelectorAll('[data-directory-dot]')];
