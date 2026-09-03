@@ -474,14 +474,18 @@ a { color: inherit; }
 }
 .project-list > button:hover { background: var(--yellow); }
 .project-list img, .project-type-art { width: 156px; height: 104px; object-fit: cover; border: 1px solid var(--ink); }
-.project-type-art { display: grid; place-items: center; background: var(--paper); color: var(--blue); font-size: 24px; line-height: .9; font-weight: 900; text-align: center; }
+.project-type-art { display: grid; place-items: center; background: var(--paper); color: var(--ink); font-size: 22px; line-height: .95; font-weight: 900; text-align: center; }
 .project-type-art { font-family: var(--font-display); }
-.practice-art { background: var(--blue); color: white; }
-.spring-art { background: var(--red); color: var(--yellow); }
-.cloud-art { background: var(--pink); color: white; }
-.book-art { background: var(--green); color: var(--ink); }
+.practice-art { background: #bcdcf4; }
+.spring-art { background: #ffc9ba; }
+.cloud-art { background: #d9c8ef; }
+.book-art { background: #c9e8d2; }
 .project-no { font-family: var(--font-mono); font-size: 11px; }
-.project-list strong { font-family: var(--font-pixel); font-size: 24px; }
+.project-list strong {
+  font-family: "Songti SC", "STSong", "SimSun", serif;
+  font-size: 24px;
+  font-weight: 300;
+}
 .project-list small { font-size: 13px; }
 .project-list i { font-size: 24px; font-style: normal; }
 
