@@ -35,7 +35,7 @@
   --max: 1440px;
   --header: 72px;
   --font-display: "Gurmukhi MN", "HanziPen SC", "Hannotate SC", "Kaiti SC", "STKaiti", "KaiTi", "Times New Roman", serif;
-  --font-sans: "Cubic Pixel", "Geist Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-sans: "Geist Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
   --font-mono: "Geist Mono", "SFMono-Regular", Consolas, monospace;
   --font-pixel: "Cubic Pixel", "Geist Sans", sans-serif;
 }
@@ -222,6 +222,58 @@ a { color: inherit; }
   filter: saturate(.76) contrast(.94) brightness(1.03);
   opacity: .72;
 }
+.jar-content {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+}
+.jar-content-coffee {
+  background:
+    radial-gradient(ellipse at 16% 84%, #3e2115 0 7%, transparent 8%),
+    radial-gradient(ellipse at 38% 91%, #5d321d 0 8%, transparent 9%),
+    radial-gradient(ellipse at 61% 83%, #2a160f 0 7%, transparent 8%),
+    radial-gradient(ellipse at 85% 92%, #704024 0 8%, transparent 9%),
+    radial-gradient(ellipse at 12% 69%, #61341c 0 6%, transparent 7%),
+    radial-gradient(ellipse at 48% 71%, #321a10 0 7%, transparent 8%),
+    radial-gradient(ellipse at 77% 67%, #4e2817 0 7%, transparent 8%),
+    linear-gradient(180deg, transparent 18%, rgba(67, 33, 17, .24) 40%, #3a1f15 100%);
+  background-size: 92px 68px, 108px 72px, 84px 64px, 110px 76px, 88px 62px, 100px 70px, 95px 65px, 100% 100%;
+  background-position: 0 0, 22px 10px, 42px 0, 6px 18px, 26px 32px, 56px 28px, 10px 40px, 0 0;
+  opacity: .95;
+}
+.jar-content-gummy {
+  background:
+    radial-gradient(ellipse at 16% 70%, #ff5c7a 0 8%, transparent 9%),
+    radial-gradient(ellipse at 41% 84%, #ffc52e 0 9%, transparent 10%),
+    radial-gradient(ellipse at 70% 72%, #49c9ff 0 9%, transparent 10%),
+    radial-gradient(ellipse at 87% 90%, #b768ff 0 8%, transparent 9%),
+    radial-gradient(ellipse at 23% 94%, #6fe08f 0 8%, transparent 9%),
+    linear-gradient(180deg, transparent 20%, rgba(255, 255, 255, .12) 45%, rgba(255, 148, 190, .36) 100%);
+  background-size: 78px 70px, 90px 76px, 86px 74px, 82px 70px, 96px 78px, 100% 100%;
+  background-position: 0 10px, 24px 0, 58px 12px, 12px 32px, 44px 28px, 0 0;
+  opacity: .9;
+}
+.jar-content-tomato {
+  background:
+    radial-gradient(ellipse at 22% 75%, rgba(255, 130, 100, .45) 0 6%, transparent 7%),
+    radial-gradient(ellipse at 73% 84%, rgba(255, 100, 74, .35) 0 7%, transparent 8%),
+    linear-gradient(180deg, transparent 19%, rgba(210, 42, 31, .7) 39%, #ad1d1d 100%);
+  opacity: .86;
+}
+.jar-content-candy {
+  background:
+    radial-gradient(ellipse at 15% 76%, #ef5877 0 7%, transparent 8%),
+    radial-gradient(ellipse at 38% 88%, #65c8ff 0 8%, transparent 9%),
+    radial-gradient(ellipse at 67% 78%, #ffd94e 0 8%, transparent 9%),
+    radial-gradient(ellipse at 88% 91%, #a66bff 0 7%, transparent 8%),
+    radial-gradient(ellipse at 52% 68%, #6ddd8a 0 7%, transparent 8%),
+    linear-gradient(180deg, transparent 17%, rgba(255, 255, 255, .1) 45%, rgba(78, 174, 220, .35) 100%);
+  background-size: 82px 68px, 92px 72px, 84px 68px, 96px 72px, 88px 70px, 100% 100%;
+  background-position: 0 4px, 34px 0, 62px 18px, 16px 30px, 46px 26px, 0 0;
+  opacity: .88;
+}
 .jar-body::before {
   content: "";
   position: absolute;
@@ -352,7 +404,7 @@ a { color: inherit; }
 .portrait-media img { object-position: center 62%; }
 .card-copy { position: relative; display: block; min-height: 104px; padding: 14px 48px 17px 16px; }
 .card-copy small { display: block; margin-bottom: 6px; font-family: var(--font-mono); font-size: 10px; }
-.card-copy strong { display: block; font-family: var(--font-pixel); font-size: 20px; line-height: 1.25; }
+.card-copy strong { display: block; font-family: var(--font-display); font-size: 20px; line-height: 1.25; }
 .card-copy i { position: absolute; right: 15px; bottom: 13px; font-style: normal; font-size: 22px; }
 .metric { display: block; margin-top: 8px; color: var(--blue); font-family: var(--font-mono); font-size: 13px; font-weight: 700; }
 .feature-card { grid-column: span 2; }
@@ -427,13 +479,13 @@ a { color: inherit; }
 .project-list > button:hover { background: var(--yellow); }
 .project-list img, .project-type-art { width: 156px; height: 104px; object-fit: cover; border: 1px solid var(--ink); }
 .project-type-art { display: grid; place-items: center; background: var(--paper); color: var(--blue); font-size: 24px; line-height: .9; font-weight: 900; text-align: center; }
-.project-type-art { font-family: var(--font-pixel); }
+.project-type-art { font-family: var(--font-display); }
 .practice-art { background: var(--blue); color: white; }
 .spring-art { background: var(--red); color: var(--yellow); }
 .cloud-art { background: var(--pink); color: white; }
 .book-art { background: var(--green); color: var(--ink); }
 .project-no { font-family: var(--font-mono); font-size: 11px; }
-.project-list strong { font-family: var(--font-pixel); font-size: 24px; }
+.project-list strong { font-family: var(--font-display); font-size: 24px; }
 .project-list small { font-size: 13px; }
 .project-list i { font-size: 24px; font-style: normal; }
 
@@ -508,7 +560,7 @@ footer {
 .dialog-body { padding: 30px; }
 .dialog-title-row { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: start; margin-bottom: 24px; }
 .dialog-title-row p { margin: 0 0 6px; font-family: var(--font-mono); font-size: 10px; }
-.dialog-title-row h2 { margin: 0; font-family: var(--font-pixel); font-size: 38px; line-height: 1.1; }
+.dialog-title-row h2 { margin: 0; font-family: var(--font-display); font-size: 38px; line-height: 1.1; }
 .dialog-tag { padding: 5px 8px; border: 1px solid var(--ink); background: var(--yellow); font-family: var(--font-mono); font-size: 10px; white-space: nowrap; }
 .dialog-video { width: 100%; max-height: 70svh; background: #000; border: 1px solid var(--ink); }
 .dialog-cover { width: 100%; max-height: 68svh; object-fit: contain; background: #eee; border: 1px solid var(--ink); }
