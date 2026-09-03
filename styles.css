@@ -137,65 +137,141 @@ a { color: inherit; }
 .directory-card.is-right { left: 83%; z-index: 1; opacity: 1; pointer-events: auto; transform: translate(-50%, -50%) scale(.94); }
 .directory-card:hover { transform: translate(-50%, calc(-50% - 8px)) scale(1); }
 .directory-card:focus-visible { outline: 2px solid var(--ink); outline-offset: 8px; }
-.jar { position: relative; width: 236px; height: 350px; display: block; filter: drop-shadow(0 16px 12px rgba(0, 0, 0, .1)); }
+.jar {
+  position: relative;
+  width: 236px;
+  height: 350px;
+  display: block;
+  filter: drop-shadow(0 18px 13px rgba(0, 0, 0, .12));
+}
+.jar::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 37px;
+  left: 27px;
+  width: 182px;
+  height: 30px;
+  border: 1px solid rgba(94, 108, 108, .56);
+  border-radius: 9px 9px 4px 4px / 6px 6px 3px 3px;
+  background: rgba(226, 239, 238, .26);
+  box-shadow: inset 0 5px 7px rgba(255, 255, 255, .78), inset 0 -4px 6px rgba(103, 125, 124, .14);
+}
 .jar-lid {
   position: absolute;
-  z-index: 3;
-  top: 5px;
-  left: 0;
-  width: 100%;
+  z-index: 4;
+  top: 17px;
+  left: 10px;
+  width: calc(100% - 20px);
   height: 34px;
-  border: 1px solid #8d8d8d;
-  border-radius: 50% 50% 14% 14% / 38% 38% 18% 18%;
-  background: repeating-linear-gradient(90deg, #aaa 0 5px, #eee 5px 12px, #b8b8b8 12px 17px);
-  box-shadow: inset 0 8px 8px rgba(255, 255, 255, .7), inset 0 -5px 5px rgba(0, 0, 0, .12);
+  border: 1px solid #878b89;
+  border-radius: 50% 50% 8px 8px / 8px 8px 5px 5px;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, .1), transparent 16% 82%, rgba(0, 0, 0, .13)),
+    linear-gradient(#f8f9f7 0%, #d5d8d4 24%, #adb1ad 73%, #e7e9e6 100%);
+  box-shadow: inset 0 4px 5px rgba(255, 255, 255, .72), inset 0 -3px 3px rgba(0, 0, 0, .16), 0 3px 4px rgba(0, 0, 0, .13);
 }
-.jar-lid::after { content: ""; position: absolute; left: 5px; right: 5px; bottom: 4px; height: 2px; background: rgba(0, 0, 0, .2); }
+.jar-lid::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 7px;
+  right: 7px;
+  height: 8px;
+  border: 1px solid rgba(255, 255, 255, .62);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .16);
+}
+.jar-lid::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  height: 4px;
+  border-top: 1px solid rgba(70, 70, 70, .3);
+  border-bottom: 1px solid rgba(255, 255, 255, .5);
+}
 .jar-body {
   position: absolute;
-  top: 28px;
-  left: 8px;
-  width: calc(100% - 16px);
-  height: 310px;
+  z-index: 2;
+  top: 47px;
+  left: 10px;
+  width: calc(100% - 20px);
+  height: 291px;
   display: block;
   overflow: hidden;
-  border: 1px solid #9b9b9b;
-  border-radius: 15px 15px 39px 39px / 8px 8px 22px 22px;
-  background: rgba(240, 248, 250, .7);
-  box-shadow: inset 13px 0 18px rgba(255, 255, 255, .55), inset -10px 0 18px rgba(0, 0, 0, .1), inset 0 -12px 18px rgba(255, 255, 255, .45);
+  border: 1px solid rgba(105, 119, 118, .64);
+  border-radius: 35px 35px 39px 39px / 28px 28px 26px 26px;
+  background: rgba(239, 247, 247, .22);
+  box-shadow: inset 15px 0 17px rgba(255, 255, 255, .58), inset -13px 0 17px rgba(59, 78, 76, .12), inset 0 -16px 14px rgba(255, 255, 255, .5);
 }
-.jar-body > img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.78) contrast(.92); opacity: .82; }
+.jar-body > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(.76) contrast(.94) brightness(1.03);
+  opacity: .72;
+}
 .jar-body::before {
   content: "";
   position: absolute;
   z-index: 2;
   inset: 0;
-  background: linear-gradient(100deg, rgba(255, 255, 255, .55) 3%, transparent 16% 78%, rgba(255, 255, 255, .24) 90%);
+  background:
+    linear-gradient(96deg, rgba(255, 255, 255, .72) 2%, rgba(255, 255, 255, .24) 10%, transparent 20% 78%, rgba(255, 255, 255, .32) 90%),
+    linear-gradient(180deg, rgba(225, 241, 240, .2), transparent 20% 78%, rgba(240, 250, 249, .26));
   pointer-events: none;
 }
-.jar-body::after { content: ""; position: absolute; z-index: 2; left: 18px; right: 18px; bottom: 9px; height: 10px; border-radius: 50%; background: rgba(255, 255, 255, .36); }
+.jar-body::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 18px;
+  right: 18px;
+  bottom: 7px;
+  height: 13px;
+  border-top: 1px solid rgba(74, 93, 91, .18);
+  border-bottom: 2px solid rgba(255, 255, 255, .58);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .18);
+}
 .jar-label {
   position: absolute;
   z-index: 3;
-  top: 105px;
-  left: -2px;
-  width: calc(100% + 4px);
-  min-height: 110px;
+  top: 89px;
+  left: 0;
+  width: 100%;
+  min-height: 124px;
   display: grid;
   place-content: center;
   padding: 13px 10px;
-  border: 1px solid #9c9c9c;
-  background: rgba(252, 250, 243, .94);
+  border-top: 1px solid rgba(98, 98, 92, .7);
+  border-bottom: 1px solid rgba(98, 98, 92, .7);
+  background: rgba(252, 250, 243, .93);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, .08);
   text-align: center;
 }
 .jar-label small { font-family: var(--font-mono); font-size: 8px; }
 .jar-label strong { margin: 3px 0 1px; font-family: var(--font-display); font-size: 31px; line-height: 1; }
 .jar-label em { font-family: var(--font-display); font-size: 15px; font-style: normal; }
-.jar-video .jar-lid { background: repeating-linear-gradient(90deg, #cdbab5 0 6px, #f3e5de 6px 14px, #bfa9a4 14px 19px); }
+.jar-video .jar-lid {
+  background:
+    linear-gradient(90deg, rgba(71, 39, 34, .11), transparent 16% 82%, rgba(71, 39, 34, .14)),
+    linear-gradient(#f5e9e4 0%, #d4bbb4 32%, #ba9992 70%, #eadbd6 100%);
+}
 .jar-video .jar-label { background: rgba(255, 241, 242, .94); }
-.jar-photo .jar-lid { background: repeating-linear-gradient(90deg, #222 0 9px, #eee 9px 18px); }
+.jar-photo .jar-lid {
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, .2), transparent 16% 82%, rgba(0, 0, 0, .24)),
+    linear-gradient(#6d6d6d 0%, #292929 38%, #111 72%, #595959 100%);
+}
 .jar-photo .jar-label { background: rgba(246, 246, 246, .94); }
-.jar-projects .jar-lid { background: repeating-linear-gradient(90deg, #91b85e 0 7px, #e2edcf 7px 14px, #779c49 14px 20px); }
+.jar-projects .jar-lid {
+  background:
+    linear-gradient(90deg, rgba(24, 54, 20, .14), transparent 16% 82%, rgba(24, 54, 20, .18)),
+    linear-gradient(#dbe8c6 0%, #a9c380 34%, #779a55 72%, #c8daa9 100%);
+}
 .jar-projects .jar-label { background: rgba(242, 249, 230, .94); }
 .directory-dots { display: flex; justify-content: center; gap: 27px; margin-top: -2px; }
 .directory-dots button {
