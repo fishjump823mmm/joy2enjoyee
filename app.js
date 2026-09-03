@@ -9,20 +9,20 @@ const directoryDots = [...document.querySelectorAll('[data-directory-dot]')];
 const wideDirectoryQuery = window.matchMedia('(min-width: 761px)');
 let activeDirectory = 0;
 
-function setActiveDirectory(index) {
+function setActiveDirectory(index, shouldScroll = false) {
   const count = directoryItems.length;
   activeDirectory = (index + count) % count;
   const previous = (activeDirectory - 1 + count) % count;
   const next = (activeDirectory + 1) % count;
 
   directoryItems.forEach((item, itemIndex) => {
-    const visible = wideDirectoryQuery.matches || itemIndex === previous || itemIndex === activeDirectory || itemIndex === next;
-    item.classList.toggle('is-left', itemIndex === previous);
-    item.classList.toggle('is-center', itemIndex === activeDirectory);
-    item.classList.toggle('is-right', itemIndex === next);
+    const isWide = wideDirectoryQuery.matches;
+    item.classList.toggle('is-left', isWide && itemIndex === previous);
+    item.classList.toggle('is-center', isWide && itemIndex === activeDirectory);
+    item.classList.toggle('is-right', isWide && itemIndex === next);
     item.classList.toggle('is-selected', itemIndex === activeDirectory);
-    item.setAttribute('aria-hidden', String(!visible));
-    item.tabIndex = visible ? 0 : -1;
+    item.setAttribute('aria-hidden', 'false');
+    item.tabIndex = 0;
   });
   directoryDots.forEach((dot, dotIndex) => {
     const selected = dotIndex === activeDirectory;
@@ -30,9 +30,13 @@ function setActiveDirectory(index) {
     if (selected) dot.setAttribute('aria-current', 'true');
     else dot.removeAttribute('aria-current');
   });
+
+  if (shouldScroll && !wideDirectoryQuery.matches) {
+    directoryItems[activeDirectory].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  }
 }
 
-directoryDots.forEach((dot, index) => dot.addEventListener('click', () => setActiveDirectory(index)));
+directoryDots.forEach((dot, index) => dot.addEventListener('click', () => setActiveDirectory(index, true)));
 directoryStage.addEventListener('pointermove', (event) => {
   if (!wideDirectoryQuery.matches) return;
   const rect = directoryStage.getBoundingClientRect();
@@ -43,8 +47,22 @@ directoryStage.addEventListener('pointermove', (event) => {
 directoryStage.addEventListener('keydown', (event) => {
   if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
   event.preventDefault();
-  setActiveDirectory(activeDirectory + (event.key === 'ArrowRight' ? 1 : -1));
+  setActiveDirectory(activeDirectory + (event.key === 'ArrowRight' ? 1 : -1), true);
 });
+let directoryScrollFrame = 0;
+directoryStage.addEventListener('scroll', () => {
+  if (wideDirectoryQuery.matches || directoryScrollFrame) return;
+  directoryScrollFrame = requestAnimationFrame(() => {
+    directoryScrollFrame = 0;
+    const stageCenter = directoryStage.getBoundingClientRect().left + directoryStage.clientWidth / 2;
+    const nearestIndex = directoryItems.reduce((nearest, item, index) => {
+      const rect = item.getBoundingClientRect();
+      const distance = Math.abs(rect.left + rect.width / 2 - stageCenter);
+      return distance < nearest.distance ? { index, distance } : nearest;
+    }, { index: 0, distance: Infinity }).index;
+    if (nearestIndex !== activeDirectory) setActiveDirectory(nearestIndex);
+  });
+}, { passive: true });
 wideDirectoryQuery.addEventListener('change', () => setActiveDirectory(activeDirectory));
 setActiveDirectory(0);
 
