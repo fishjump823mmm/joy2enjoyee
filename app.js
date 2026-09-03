@@ -8,6 +8,8 @@ const mainContent = document.querySelector('main');
   const section = document.getElementById(sectionId);
   if (section) mainContent.append(section);
 });
+const contactSection = document.getElementById('contact');
+if (contactSection) mainContent.append(contactSection);
 
 const directoryStage = document.querySelector('.directory-stage');
 const directoryItems = [...document.querySelectorAll('[data-directory-item]')];
