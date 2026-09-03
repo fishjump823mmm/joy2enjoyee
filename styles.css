@@ -14,6 +14,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Cubic Pixel";
+  src: url("assets/fonts/Cubic_11.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+}
+
 :root {
   --ink: #111111;
   --paper: #ffffff;
@@ -27,8 +35,9 @@
   --max: 1440px;
   --header: 72px;
   --font-display: "Gurmukhi MN", "HanziPen SC", "Hannotate SC", "Kaiti SC", "STKaiti", "KaiTi", "Times New Roman", serif;
-  --font-sans: "Geist Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-sans: "Cubic Pixel", "Geist Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
   --font-mono: "Geist Mono", "SFMono-Regular", Consolas, monospace;
+  --font-pixel: "Cubic Pixel", "Geist Sans", sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -254,7 +263,7 @@ a { color: inherit; }
 }
 .jar-label small { font-family: var(--font-mono); font-size: 8px; }
 .jar-label strong { margin: 3px 0 1px; font-family: var(--font-display); font-size: 31px; line-height: 1; }
-.jar-label em { font-family: var(--font-display); font-size: 15px; font-style: normal; }
+.jar-label em { font-family: var(--font-pixel); font-size: 15px; font-style: normal; }
 .jar-video .jar-lid {
   background:
     linear-gradient(90deg, rgba(71, 39, 34, .11), transparent 16% 82%, rgba(71, 39, 34, .14)),
@@ -317,7 +326,7 @@ a { color: inherit; }
 .section-heading h2 em {
   margin-left: 16px;
   color: var(--blue);
-  font-family: var(--font-display);
+  font-family: var(--font-pixel);
   font-size: 26px;
   font-weight: 400;
 }
@@ -343,7 +352,7 @@ a { color: inherit; }
 .portrait-media img { object-position: center 62%; }
 .card-copy { position: relative; display: block; min-height: 104px; padding: 14px 48px 17px 16px; }
 .card-copy small { display: block; margin-bottom: 6px; font-family: var(--font-mono); font-size: 10px; }
-.card-copy strong { display: block; font-family: var(--font-display); font-size: 20px; line-height: 1.25; }
+.card-copy strong { display: block; font-family: var(--font-pixel); font-size: 20px; line-height: 1.25; }
 .card-copy i { position: absolute; right: 15px; bottom: 13px; font-style: normal; font-size: 22px; }
 .metric { display: block; margin-top: 8px; color: var(--blue); font-family: var(--font-mono); font-size: 13px; font-weight: 700; }
 .feature-card { grid-column: span 2; }
@@ -417,12 +426,14 @@ a { color: inherit; }
 }
 .project-list > button:hover { background: var(--yellow); }
 .project-list img, .project-type-art { width: 156px; height: 104px; object-fit: cover; border: 1px solid var(--ink); }
-.project-list img.project-cover-portrait { object-fit: contain; background: #ff4545; }
 .project-type-art { display: grid; place-items: center; background: var(--paper); color: var(--blue); font-size: 24px; line-height: .9; font-weight: 900; text-align: center; }
+.project-type-art { font-family: var(--font-pixel); }
+.practice-art { background: var(--blue); color: white; }
+.spring-art { background: var(--red); color: var(--yellow); }
 .cloud-art { background: var(--pink); color: white; }
 .book-art { background: var(--green); color: var(--ink); }
 .project-no { font-family: var(--font-mono); font-size: 11px; }
-.project-list strong { font-family: var(--font-display); font-size: 24px; }
+.project-list strong { font-family: var(--font-pixel); font-size: 24px; }
 .project-list small { font-size: 13px; }
 .project-list i { font-size: 24px; font-style: normal; }
 
@@ -436,7 +447,7 @@ a { color: inherit; }
   border-top: 1px solid var(--ink);
 }
 .contact-section h2 { margin: 0; font-family: var(--font-display); font-size: 54px; line-height: 1; color: var(--green); }
-.cn-contact { margin-top: 14px; font-family: var(--font-display); font-size: 24px; }
+.cn-contact { margin-top: 14px; font-family: var(--font-pixel); font-size: 24px; }
 .contact-links { border-top: 1px solid white; }
 .contact-links a, .contact-links button {
   width: 100%;
@@ -497,13 +508,13 @@ footer {
 .dialog-body { padding: 30px; }
 .dialog-title-row { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: start; margin-bottom: 24px; }
 .dialog-title-row p { margin: 0 0 6px; font-family: var(--font-mono); font-size: 10px; }
-.dialog-title-row h2 { margin: 0; font-family: var(--font-display); font-size: 38px; line-height: 1.1; }
+.dialog-title-row h2 { margin: 0; font-family: var(--font-pixel); font-size: 38px; line-height: 1.1; }
 .dialog-tag { padding: 5px 8px; border: 1px solid var(--ink); background: var(--yellow); font-family: var(--font-mono); font-size: 10px; white-space: nowrap; }
 .dialog-video { width: 100%; max-height: 70svh; background: #000; border: 1px solid var(--ink); }
 .dialog-cover { width: 100%; max-height: 68svh; object-fit: contain; background: #eee; border: 1px solid var(--ink); }
 .dialog-summary { display: grid; grid-template-columns: 150px 1fr; gap: 24px; margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--ink); }
 .dialog-summary h3 { margin: 0; font-family: var(--font-mono); font-size: 11px; }
-.dialog-summary p { margin: 0; max-width: 720px; }
+.dialog-summary p { margin: 0; max-width: 720px; font-family: var(--font-pixel); }
 .dialog-summary p + p { margin-top: 8px; }
 .dialog-stats { display: grid; grid-template-columns: repeat(3, 1fr); margin: 22px 0; border-top: 1px solid var(--ink); border-left: 1px solid var(--ink); }
 .dialog-stats div { min-height: 98px; padding: 15px; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
