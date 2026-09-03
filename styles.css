@@ -33,7 +33,6 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-main { display: flex; flex-direction: column; }
 body {
   margin: 0;
   color: var(--ink);
@@ -208,7 +207,11 @@ a { color: inherit; }
   box-shadow: inset 15px 0 17px rgba(255, 255, 255, .58), inset -13px 0 17px rgba(59, 78, 76, .12), inset 0 -16px 14px rgba(255, 255, 255, .5);
 }
 .jar-body > img {
-  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(.76) contrast(.94) brightness(1.03);
+  opacity: .72;
 }
 .jar-body::before {
   content: "";
@@ -294,12 +297,7 @@ a { color: inherit; }
   .directory-card[data-directory-item]:hover { transform: translate(-50%, calc(-50% - 8px)) scale(1); }
 }
 
-.work-section { padding: 104px max(24px, calc((100vw - var(--max)) / 2)); border-top: 1px solid var(--ink); }
-.section-projects { order: 1; }
-.section-aigc { order: 2; }
-.section-video { order: 3; }
-.section-photo { order: 4; }
-.contact-section { order: 5; }
+.work-section { padding: 90px max(24px, calc((100vw - var(--max)) / 2)); border-top: 1px solid var(--ink); }
 .section-aigc { background: #f4f4f4; }
 .section-video { background: var(--paper); }
 .section-photo { background: #e9f6ff; }
@@ -419,6 +417,7 @@ a { color: inherit; }
 }
 .project-list > button:hover { background: var(--yellow); }
 .project-list img, .project-type-art { width: 156px; height: 104px; object-fit: cover; border: 1px solid var(--ink); }
+.project-list img.project-cover-portrait { object-fit: contain; background: #ff4545; }
 .project-type-art { display: grid; place-items: center; background: var(--paper); color: var(--blue); font-size: 24px; line-height: .9; font-weight: 900; text-align: center; }
 .cloud-art { background: var(--pink); color: white; }
 .book-art { background: var(--green); color: var(--ink); }
@@ -586,14 +585,10 @@ footer {
   .directory-card.is-left:hover,
   .directory-card.is-center:hover,
   .directory-card.is-right:hover { transform: none; }
-  .directory-card[data-directory-item="0"] { order: 0; }
-  .directory-card[data-directory-item="1"] { order: 1; }
-  .directory-card[data-directory-item="2"] { order: 2; }
-  .directory-card[data-directory-item="3"] { order: 3; }
   .jar { transform: none; }
   .directory-dots { gap: 18px; margin-top: 2px; }
   .directory-dots button { width: 16px; height: 16px; }
-  .work-section { padding: 76px 16px; }
+  .work-section { padding: 68px 16px; }
   .section-heading { margin-bottom: 28px; }
   .section-heading h2 { font-size: 38px; }
   .section-heading h2 em { display: block; margin: 10px 0 0; font-size: 22px; }

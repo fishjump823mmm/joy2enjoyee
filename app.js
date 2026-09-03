@@ -3,15 +3,8 @@ const dialogBody = document.querySelector('#dialog-body');
 const dialogIndex = document.querySelector('#dialog-index');
 const toast = document.querySelector('.toast');
 
-const mainContent = document.querySelector('main');
-['projects', 'aigc', 'video', 'photo'].forEach((sectionId) => {
-  const section = document.getElementById(sectionId);
-  if (section) mainContent.append(section);
-});
-
 const directoryStage = document.querySelector('.directory-stage');
-const directoryItems = [...document.querySelectorAll('[data-directory-item]')]
-  .sort((a, b) => Number(a.dataset.directoryItem) - Number(b.dataset.directoryItem));
+const directoryItems = [...document.querySelectorAll('[data-directory-item]')];
 const directoryDots = [...document.querySelectorAll('[data-directory-dot]')];
 const wideDirectoryQuery = window.matchMedia('(min-width: 761px)');
 let activeDirectory = 0;
@@ -87,7 +80,7 @@ const projectContent = {
   },
   'twin-realms': {
     index: 'AIGC_02 / TWIN_REALMS',
-    html: `${title('AIGC DIGITAL HUMAN MV', '《双生无界》', 'TEAM')} ${video('assets/video/twin-realms.mp4', 'assets/images/aigc/twin-realms-cover.jpg', '双生无界 AIGC 数字人 MV')} ${summary('ROLE', '<p>负责约 01:00–02:30 的视觉段落：人物三视图、换装、场景生成与画面动态化。</p><p>音频由团队原创制作，本人仅参与少量协作。</p>')} ${gallery([['assets/images/aigc/twin-audio.png','双生无界音频制作流程']], '')}`
+    html: `${title('AIGC DIGITAL HUMAN MV', '《双生无界》', 'TEAM')} ${video('assets/video/twin-realms.mp4', 'assets/images/aigc/twin-realms.jpg', '双生无界 AIGC 数字人 MV')} ${summary('ROLE', '<p>负责约 01:00–02:30 的视觉段落：人物三视图、换装、场景生成与画面动态化。</p><p>音频由团队原创制作，本人仅参与少量协作。</p>')} ${gallery([['assets/images/aigc/twin-audio.png','双生无界音频制作流程']], '')}`
   },
   plubble: {
     index: 'AIGC_03 / PLUBBLE',
@@ -95,7 +88,7 @@ const projectContent = {
   },
   delulu: {
     index: 'AIGC_04 / DELULU',
-    html: `${title('AIGC MV', '《DELULU》MV', 'MY SEGMENT 01:00–03:20')} ${video('assets/video/delulu.mp4', 'assets/images/aigc/delulu.jpg', 'DELULU AIGC MV，本人负责 01:00–03:20')} ${summary('ROLE', '<p>团队作品，网页展示本人负责的 01:00–03:20 片段。</p>')}`
+    html: `${title('AIGC MV', '《DELULU》MV', 'TEAM')} ${reserved('待替换为本人负责的裁剪片段')} ${summary('ROLE', '<p>团队作品。第一版保留个人负责片段入口，收到裁剪文件后直接替换。</p>')}`
   },
   afterlike: {
     index: 'AIGC_05 / AFTERLIKE',
@@ -124,7 +117,7 @@ const projectContent = {
   },
   'ai-spring-festival': {
     index: 'PROJECT_02 / AI_SPRING_FESTIVAL',
-    html: `${title('NETEASE AI SPRING FESTIVAL', '《音舞次元串烧》', 'FULL PIPELINE')} ${video('assets/video/ai-spring-festival.mp4', 'assets/images/projects/ai-spring-festival.jpg', '音舞次元串烧')} ${summary('ROLE', '<p>独立负责单节目全流程制作：围绕多首歌曲制作桃乐唱跳画面并完成串联剪辑。</p>')}<a class="dialog-link" href="https://y.music.163.com/g/yida/act/chunwan/K_ipyv1gy4j9?app_version=9.4.65&fromRN=1&market=search&userid=260640198&dlt=0846&page=dca30144380144169b722bd503c24e13" target="_blank" rel="noreferrer">VIEW OFFICIAL PAGE ↗</a>`
+    html: `${title('NETEASE AI SPRING FESTIVAL', '《音舞次元串烧》', 'FULL PIPELINE')} ${video('assets/video/ai-spring-festival.mp4', 'assets/images/projects/ai-spring-festival-original.jpg', '音舞次元串烧')} ${summary('ROLE', '<p>独立负责单节目全流程制作：围绕多首歌曲制作桃乐唱跳画面并完成串联剪辑。</p>')}<a class="dialog-link" href="https://y.music.163.com/g/yida/act/chunwan/K_ipyv1gy4j9?app_version=9.4.65&fromRN=1&market=search&userid=260640198&dlt=0846&page=dca30144380144169b722bd503c24e13" target="_blank" rel="noreferrer">VIEW OFFICIAL PAGE ↗</a>`
   },
   'cloud-tv': {
     index: 'PROJECT_03 / YUN_CUN_TV',

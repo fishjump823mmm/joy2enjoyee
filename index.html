@@ -7,8 +7,8 @@
   <meta name="theme-color" content="#ffffff">
   <title>JOY2ENJOYEE — QIU YUYUE PORTFOLIO</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="styles.css?v=reorder-1">
-  <script src="app.js?v=reorder-1" defer></script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to work</a>
@@ -19,10 +19,10 @@
       <span></span><span></span><span></span>
     </button>
     <nav class="site-nav" aria-label="Main navigation">
-      <a href="#projects">PROJECTS</a>
       <a href="#aigc">AIGC</a>
       <a href="#video">VIDEO</a>
       <a href="#photo">PHOTO</a>
+      <a href="#projects">PROJECTS</a>
       <a href="#contact">CONTACT</a>
     </nav>
   </header>
@@ -32,7 +32,7 @@
       <h1 id="hero-title">Portfolio</h1>
       <div class="directory-carousel">
         <div class="directory-stage" tabindex="0" aria-label="Portfolio categories">
-          <a class="directory-card is-center" href="#aigc" data-directory-item="1" aria-label="AIGC 人工智能创作">
+          <a class="directory-card is-center" href="#aigc" data-directory-item="0" aria-label="AIGC 人工智能创作">
             <span class="jar jar-aigc">
               <span class="jar-lid"></span>
               <span class="jar-body">
@@ -41,46 +41,46 @@
               </span>
             </span>
           </a>
-          <a class="directory-card is-right" href="#video" data-directory-item="2" aria-label="Video Works 视频作品">
+          <a class="directory-card is-right" href="#video" data-directory-item="1" aria-label="Video Works 视频作品">
             <span class="jar jar-video">
               <span class="jar-lid"></span>
               <span class="jar-body">
                 <img src="assets/images/video/love-guide-cover.jpg" alt="" draggable="false">
-                <span class="jar-label"><small>03 / MOVING IMAGE</small><strong>VIDEO</strong><em>视频作品</em></span>
+                <span class="jar-label"><small>02 / MOVING IMAGE</small><strong>VIDEO</strong><em>视频作品</em></span>
               </span>
             </span>
           </a>
-          <a class="directory-card" href="#photo" data-directory-item="3" aria-label="Photography 摄影作品">
+          <a class="directory-card" href="#photo" data-directory-item="2" aria-label="Photography 摄影作品">
             <span class="jar jar-photo">
               <span class="jar-lid"></span>
               <span class="jar-body">
                 <img src="assets/images/photo/portrait/portrait-2.jpg" alt="" draggable="false">
-                <span class="jar-label"><small>04 / STILL IMAGE</small><strong>PHOTO</strong><em>摄影作品</em></span>
+                <span class="jar-label"><small>03 / STILL IMAGE</small><strong>PHOTO</strong><em>摄影作品</em></span>
               </span>
             </span>
           </a>
-          <a class="directory-card is-left" href="#projects" data-directory-item="0" aria-label="Projects 参与项目">
+          <a class="directory-card is-left" href="#projects" data-directory-item="3" aria-label="Projects 参与项目">
             <span class="jar jar-projects">
               <span class="jar-lid"></span>
               <span class="jar-body">
                 <img src="assets/images/projects/practice-room-1.jpg" alt="" draggable="false">
-                <span class="jar-label"><small>01 / EXPERIENCE</small><strong>PROJECTS</strong><em>参与项目</em></span>
+                <span class="jar-label"><small>04 / EXPERIENCE</small><strong>PROJECTS</strong><em>参与项目</em></span>
               </span>
             </span>
           </a>
         </div>
         <div class="directory-dots" aria-label="Choose portfolio category">
-          <button type="button" class="is-active" data-directory-dot="0" aria-label="Show Projects" aria-current="true"></button>
-          <button type="button" data-directory-dot="1" aria-label="Show AIGC"></button>
-          <button type="button" data-directory-dot="2" aria-label="Show Video Works"></button>
-          <button type="button" data-directory-dot="3" aria-label="Show Photography"></button>
+          <button type="button" class="is-active" data-directory-dot="0" aria-label="Show AIGC" aria-current="true"></button>
+          <button type="button" data-directory-dot="1" aria-label="Show Video Works"></button>
+          <button type="button" data-directory-dot="2" aria-label="Show Photography"></button>
+          <button type="button" data-directory-dot="3" aria-label="Show Projects"></button>
         </div>
       </div>
     </section>
 
     <section class="work-section section-aigc" id="aigc" aria-labelledby="aigc-title">
       <div class="section-heading">
-        <p>02 / GENERATIVE MEDIA</p>
+        <p>01 / GENERATIVE MEDIA</p>
         <h2 id="aigc-title">AIGC <em>人工智能创作</em></h2>
       </div>
       <div class="work-grid aigc-grid">
@@ -95,7 +95,7 @@
         </button>
 
         <button class="work-card" type="button" data-project="twin-realms">
-          <span class="card-media"><img src="assets/images/aigc/twin-realms-cover.jpg" alt="双生无界 AIGC 数字人 MV"></span>
+          <span class="card-media"><img src="assets/images/aigc/twin-realms.jpg" alt="双生无界 AIGC 数字人 MV"></span>
           <span class="card-copy"><small>AIGC MV / TEAM</small><strong>《双生无界》</strong><i aria-hidden="true">↗</i></span>
         </button>
 
@@ -104,9 +104,9 @@
           <span class="card-copy"><small>CONCEPT / TEAM</small><strong>《PLUBBLE》珠宝广告</strong><i aria-hidden="true">↗</i></span>
         </button>
 
-        <button class="work-card" type="button" data-project="delulu">
-          <span class="card-media"><img src="assets/images/aigc/delulu.jpg" alt="DELULU AIGC MV"></span>
-          <span class="card-copy"><small>AIGC MV / TEAM / MY SEGMENT 01:00–03:20</small><strong>《DELULU》MV</strong><i aria-hidden="true">↗</i></span>
+        <button class="work-card placeholder-card" type="button" data-project="delulu">
+          <span class="card-media placeholder-media"><span>DELULU<br>VIDEO SLOT</span></span>
+          <span class="card-copy"><small>AIGC MV / TEAM</small><strong>《DELULU》MV</strong><i aria-hidden="true">↗</i></span>
         </button>
 
         <button class="work-card" type="button" data-project="afterlike">
@@ -123,7 +123,7 @@
 
     <section class="work-section section-video" id="video" aria-labelledby="video-title">
       <div class="section-heading">
-        <p>03 / MOVING IMAGE</p>
+        <p>02 / MOVING IMAGE</p>
         <h2 id="video-title">VIDEO WORKS <em>视频作品</em></h2>
       </div>
       <div class="work-grid video-grid">
@@ -172,7 +172,7 @@
 
     <section class="work-section section-photo" id="photo" aria-labelledby="photo-title">
       <div class="section-heading">
-        <p>04 / STILL IMAGE</p>
+        <p>03 / STILL IMAGE</p>
         <h2 id="photo-title">PHOTOGRAPHY <em>摄影作品</em></h2>
       </div>
       <div class="photo-tabs" role="tablist" aria-label="Photography categories">
@@ -201,7 +201,7 @@
 
     <section class="work-section section-projects" id="projects" aria-labelledby="projects-title">
       <div class="section-heading">
-        <p>01 / SELECTED EXPERIENCE</p>
+        <p>04 / SELECTED EXPERIENCE</p>
         <h2 id="projects-title">PROJECTS <em>参与项目</em></h2>
       </div>
       <div class="project-list">
@@ -209,7 +209,7 @@
           <span class="project-no">P.01</span><img src="assets/images/projects/practice-room-1.jpg" alt="奇妙练歌房4"><strong>《奇妙练歌房4》</strong><small>责任编辑 / 策划 / 现场执行</small><i>↗</i>
         </button>
         <button type="button" data-project="ai-spring-festival">
-          <span class="project-no">P.02</span><img src="assets/images/projects/ai-spring-festival.jpg" alt="网易 AI 春晚"><strong>网易 AI 春晚《音舞次元串烧》</strong><small>全流程制作</small><i>↗</i>
+          <span class="project-no">P.02</span><img class="project-cover-portrait" src="assets/images/projects/ai-spring-festival-original.jpg" alt="网易 AI 春晚"><strong>网易 AI 春晚《音舞次元串烧》</strong><small>全流程制作</small><i>↗</i>
         </button>
         <button type="button" data-project="cloud-tv">
           <span class="project-no">P.03</span><span class="project-type-art cloud-art">YCTV<br>04/01</span><strong>“云村TV——愚人节特别节目”</strong><small>供应商沟通与制作协助</small><i>↗</i>
