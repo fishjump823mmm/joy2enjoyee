@@ -80,7 +80,7 @@ const projectContent = {
   },
   'twin-realms': {
     index: 'AIGC_02 / TWIN_REALMS',
-    html: `${title('AIGC DIGITAL HUMAN MV', '《双生无界》', 'TEAM')} ${video('assets/video/twin-realms.mp4', 'assets/images/aigc/twin-realms.jpg', '双生无界 AIGC 数字人 MV')} ${summary('ROLE', '<p>负责约 01:00–02:30 的视觉段落：人物三视图、换装、场景生成与画面动态化。</p><p>音频由团队原创制作，本人仅参与少量协作。</p>')} ${gallery([['assets/images/aigc/twin-audio.png','双生无界音频制作流程']], '')}`
+    html: `${title('AIGC DIGITAL HUMAN MV', '《双生无界》', 'TEAM')} ${video('assets/video/twin-realms.mp4', 'assets/images/aigc/twin-realms-cover.jpg', '双生无界 AIGC 数字人 MV')} ${summary('ROLE', '<p>负责约 01:00–02:30 的视觉段落：人物三视图、换装、场景生成与画面动态化。</p><p>音频由团队原创制作，本人仅参与少量协作。</p>')} ${gallery([['assets/images/aigc/twin-audio.png','双生无界音频制作流程']], '')}`
   },
   plubble: {
     index: 'AIGC_03 / PLUBBLE',
