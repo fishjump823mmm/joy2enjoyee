@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JOY2ENJOYEE — QIU YUYUE PORTFOLIO">
+  <meta name="theme-color" content="#ffffff">
+  <title>JOY2ENJOYEE — QIU YUYUE PORTFOLIO</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to work</a>
+
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Back to top">JOY2ENJOYEE</a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#aigc">AIGC</a>
+      <a href="#video">VIDEO</a>
+      <a href="#photo">PHOTO</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero directory-hero" id="top" aria-labelledby="hero-title">
+      <h1 id="hero-title">Portfolio</h1>
+      <div class="directory-carousel">
+        <div class="directory-stage" tabindex="0" aria-label="Portfolio categories">
+          <a class="directory-card is-center" href="#aigc" data-directory-item="0" aria-label="AIGC 人工智能创作">
+            <span class="jar jar-aigc">
+              <span class="jar-lid"></span>
+              <span class="jar-body">
+                <img src="assets/images/aigc/taro.jpg" alt="" draggable="false">
+                <span class="jar-label"><small>01 / GENERATIVE</small><strong>AIGC</strong><em>人工智能创作</em></span>
+              </span>
+            </span>
+          </a>
+          <a class="directory-card is-right" href="#video" data-directory-item="1" aria-label="Video Works 视频作品">
+            <span class="jar jar-video">
+              <span class="jar-lid"></span>
+              <span class="jar-body">
+                <img src="assets/images/video/love-guide-cover.jpg" alt="" draggable="false">
+                <span class="jar-label"><small>02 / MOVING IMAGE</small><strong>VIDEO</strong><em>视频作品</em></span>
+              </span>
+            </span>
+          </a>
+          <a class="directory-card" href="#photo" data-directory-item="2" aria-label="Photography 摄影作品">
+            <span class="jar jar-photo">
+              <span class="jar-lid"></span>
+              <span class="jar-body">
+                <img src="assets/images/photo/portrait/portrait-2.jpg" alt="" draggable="false">
+                <span class="jar-label"><small>03 / STILL IMAGE</small><strong>PHOTO</strong><em>摄影作品</em></span>
+              </span>
+            </span>
+          </a>
+          <a class="directory-card is-left" href="#projects" data-directory-item="3" aria-label="Projects 参与项目">
+            <span class="jar jar-projects">
+              <span class="jar-lid"></span>
+              <span class="jar-body">
+                <img src="assets/images/projects/practice-room-1.jpg" alt="" draggable="false">
+                <span class="jar-label"><small>04 / EXPERIENCE</small><strong>PROJECTS</strong><em>参与项目</em></span>
+              </span>
+            </span>
+          </a>
+        </div>
+        <div class="directory-dots" aria-label="Choose portfolio category">
+          <button type="button" class="is-active" data-directory-dot="0" aria-label="Show AIGC" aria-current="true"></button>
+          <button type="button" data-directory-dot="1" aria-label="Show Video Works"></button>
+          <button type="button" data-directory-dot="2" aria-label="Show Photography"></button>
+          <button type="button" data-directory-dot="3" aria-label="Show Projects"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-section section-aigc" id="aigc" aria-labelledby="aigc-title">
+      <div class="section-heading">
+        <p>01 / GENERATIVE MEDIA</p>
+        <h2 id="aigc-title">AIGC <em>人工智能创作</em></h2>
+      </div>
+      <div class="work-grid aigc-grid">
+        <button class="work-card feature-card" type="button" data-project="taro">
+          <span class="card-media"><img src="assets/images/aigc/taro.jpg" alt="桃乐 Taro 数字人"></span>
+          <span class="card-copy">
+            <small>ACCOUNT / FULL PIPELINE</small>
+            <strong>“桃乐 Taro”数字人账号</strong>
+            <span class="metric">153 → 15,515 followers</span>
+            <i aria-hidden="true">↗</i>
+          </span>
+        </button>
+
+        <button class="work-card" type="button" data-project="twin-realms">
+          <span class="card-media"><img src="assets/images/aigc/twin-realms.jpg" alt="双生无界 AIGC 数字人 MV"></span>
+          <span class="card-copy"><small>AIGC MV / TEAM</small><strong>《双生无界》</strong><i aria-hidden="true">↗</i></span>
+        </button>
+
+        <button class="work-card" type="button" data-project="plubble">
+          <span class="card-media"><img src="assets/images/aigc/plubble.jpg" alt="PLUBBLE 珠宝广告"></span>
+          <span class="card-copy"><small>CONCEPT / TEAM</small><strong>《PLUBBLE》珠宝广告</strong><i aria-hidden="true">↗</i></span>
+        </button>
+
+        <button class="work-card placeholder-card" type="button" data-project="delulu">
+          <span class="card-media placeholder-media"><span>DELULU<br>VIDEO SLOT</span></span>
+          <span class="card-copy"><small>AIGC MV / TEAM</small><strong>《DELULU》MV</strong><i aria-hidden="true">↗</i></span>
+        </button>
+
+        <button class="work-card" type="button" data-project="afterlike">
+          <span class="card-media"><img src="assets/images/aigc/afterlike.jpg" alt="AFTERLIKE 动物群星版 MV"></span>
+          <span class="card-copy"><small>AIGC MV / PERSONAL</small><strong>《AFTERLIKE》动物群星版</strong><i aria-hidden="true">↗</i></span>
+        </button>
+
+        <button class="work-card placeholder-card wide-card" type="button" data-project="love-aigc">
+          <span class="card-media"><img src="assets/images/video/love-guide-cover.jpg" alt="恋爱撤回指南 AIGC 片段"></span>
+          <span class="card-copy"><small>AIGC SEQUENCE / RESERVED</small><strong>《恋爱撤回指南》AIGC片段</strong><i aria-hidden="true">↗</i></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="work-section section-video" id="video" aria-labelledby="video-title">
+      <div class="section-heading">
+        <p>02 / MOVING IMAGE</p>
+        <h2 id="video-title">VIDEO WORKS <em>视频作品</em></h2>
+      </div>
+      <div class="work-grid video-grid">
+        <button class="work-card feature-card" type="button" data-project="love-guide">
+          <span class="card-media"><img src="assets/images/video/love-guide-cover.jpg" alt="恋爱撤回指南"></span>
+          <span class="card-copy"><small>ROMANTIC COMEDY</small><strong>《恋爱撤回指南》</strong><i aria-hidden="true">↗</i></span>
+        </button>
+        <button class="work-card" type="button" data-project="seeking-sound">
+          <span class="card-media portrait-media"><img src="assets/images/video/seeking-sound.jpg" alt="寻声"></span>
+          <span class="card-copy"><small>SHORT FILM</small><strong>《寻声》</strong><i aria-hidden="true">↗</i></span>
+        </button>
+        <button class="work-card" type="button" data-project="outside-theater">
+          <span class="card-media"><img src="assets/images/video/outside-theater.jpg" alt="剧场外"></span>
+          <span class="card-copy"><small>SHORT FILM</small><strong>《剧场外》</strong><i aria-hidden="true">↗</i></span>
+        </button>
+        <button class="work-card" type="button" data-project="finding">
+          <span class="card-media"><img src="assets/images/video/finding.jpg" alt="寻"></span>
+          <span class="card-copy"><small>SHORT FILM</small><strong>《寻》</strong><i aria-hidden="true">↗</i></span>
+        </button>
+        <button class="work-card" type="button" data-project="hello-haining">
+          <span class="card-media"><img src="assets/images/video/hello-haining.jpg" alt="你好，海宁"></span>
+          <span class="card-copy"><small>PROMOTIONAL VIDEO</small><strong>《你好，海宁》</strong><i aria-hidden="true">↗</i></span>
+        </button>
+        <button class="work-card" type="button" data-project="little-red-flower">
+          <span class="card-media"><img src="assets/images/video/little-red-flower.jpg" alt="送你一朵小红花"></span>
+          <span class="card-copy"><small>IMITATION</small><strong>《送你一朵小红花》</strong><i aria-hidden="true">↗</i></span>
+        </button>
+        <button class="work-card" type="button" data-project="sweet-peach">
+          <span class="card-media"><img src="assets/images/video/sweet-peach.jpg" alt="甜蜜，不桃走"></span>
+          <span class="card-copy"><small>ADVERTISEMENT</small><strong>《甜蜜，不“桃”走》</strong><i aria-hidden="true">↗</i></span>
+        </button>
+        <button class="work-card" type="button" data-project="coffee">
+          <span class="card-media"><img src="assets/images/video/coffee.jpg" alt="拒绝乏味 就喝咖位"></span>
+          <span class="card-copy"><small>ADVERTISEMENT</small><strong>《拒绝乏味 就喝咖位》</strong><i aria-hidden="true">↗</i></span>
+        </button>
+        <button class="work-card" type="button" data-project="qingwen-kiss">
+          <span class="card-media"><img src="assets/images/video/qingwen-kiss.jpg" alt="一颗清瘟 一个亲吻"></span>
+          <span class="card-copy"><small>ADVERTISEMENT</small><strong>《一颗清瘟 一个亲吻》</strong><i aria-hidden="true">↗</i></span>
+        </button>
+        <button class="work-card" type="button" data-project="dreams-come-true">
+          <span class="card-media"><img src="assets/images/video/dreams-come-true.jpg" alt="美梦成真"></span>
+          <span class="card-copy"><small>INTERACTIVE VIDEO</small><strong>《美梦成真》</strong><i aria-hidden="true">↗</i></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="work-section section-photo" id="photo" aria-labelledby="photo-title">
+      <div class="section-heading">
+        <p>03 / STILL IMAGE</p>
+        <h2 id="photo-title">PHOTOGRAPHY <em>摄影作品</em></h2>
+      </div>
+      <div class="photo-tabs" role="tablist" aria-label="Photography categories">
+        <button type="button" role="tab" aria-selected="true" data-photo-tab="portrait">PORTRAIT / 人像</button>
+        <button type="button" role="tab" aria-selected="false" data-photo-tab="landscape">LANDSCAPE / 风光</button>
+      </div>
+      <div class="photo-grid" data-photo-panel="portrait">
+        <button type="button" data-lightbox="assets/images/photo/portrait/portrait-1.jpg"><img src="assets/images/photo/portrait/portrait-1.jpg" alt="人像摄影作品 1" loading="lazy"></button>
+        <button type="button" data-lightbox="assets/images/photo/portrait/portrait-2.jpg"><img src="assets/images/photo/portrait/portrait-2.jpg" alt="人像摄影作品 2" loading="lazy"></button>
+        <button type="button" data-lightbox="assets/images/photo/portrait/portrait-3.jpg"><img src="assets/images/photo/portrait/portrait-3.jpg" alt="人像摄影作品 3" loading="lazy"></button>
+        <button type="button" data-lightbox="assets/images/photo/portrait/portrait-4.jpg"><img src="assets/images/photo/portrait/portrait-4.jpg" alt="人像摄影作品 4" loading="lazy"></button>
+        <button type="button" data-lightbox="assets/images/photo/portrait/portrait-5.jpg"><img src="assets/images/photo/portrait/portrait-5.jpg" alt="人像摄影作品 5" loading="lazy"></button>
+      </div>
+      <div class="photo-grid" data-photo-panel="landscape" hidden>
+        <button type="button" data-lightbox="assets/images/photo/landscape/landscape-1.jpg"><img src="assets/images/photo/landscape/landscape-1.jpg" alt="风光摄影作品 1" loading="lazy"></button>
+        <button type="button" data-lightbox="assets/images/photo/landscape/landscape-2.jpg"><img src="assets/images/photo/landscape/landscape-2.jpg" alt="风光摄影作品 2" loading="lazy"></button>
+        <button type="button" data-lightbox="assets/images/photo/landscape/landscape-3.jpg"><img src="assets/images/photo/landscape/landscape-3.jpg" alt="风光摄影作品 3" loading="lazy"></button>
+        <button type="button" data-lightbox="assets/images/photo/landscape/landscape-4.jpg"><img src="assets/images/photo/landscape/landscape-4.jpg" alt="风光摄影作品 4" loading="lazy"></button>
+        <button type="button" data-lightbox="assets/images/photo/landscape/landscape-5.jpg"><img src="assets/images/photo/landscape/landscape-5.jpg" alt="风光摄影作品 5" loading="lazy"></button>
+        <button type="button" data-lightbox="assets/images/photo/landscape/landscape-6.jpg"><img src="assets/images/photo/landscape/landscape-6.jpg" alt="风光摄影作品 6" loading="lazy"></button>
+        <button type="button" data-lightbox="assets/images/photo/landscape/landscape-7.jpg"><img src="assets/images/photo/landscape/landscape-7.jpg" alt="风光摄影作品 7" loading="lazy"></button>
+        <button type="button" data-lightbox="assets/images/photo/landscape/landscape-8.jpg"><img src="assets/images/photo/landscape/landscape-8.jpg" alt="风光摄影作品 8" loading="lazy"></button>
+        <button type="button" data-lightbox="assets/images/photo/landscape/landscape-9.jpg"><img src="assets/images/photo/landscape/landscape-9.jpg" alt="风光摄影作品 9" loading="lazy"></button>
+      </div>
+    </section>
+
+    <section class="work-section section-projects" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <p>04 / SELECTED EXPERIENCE</p>
+        <h2 id="projects-title">PROJECTS <em>参与项目</em></h2>
+      </div>
+      <div class="project-list">
+        <button type="button" data-project="practice-room">
+          <span class="project-no">P.01</span><img src="assets/images/projects/practice-room-1.jpg" alt="奇妙练歌房4"><strong>《奇妙练歌房4》</strong><small>责任编辑 / 策划 / 现场执行</small><i>↗</i>
+        </button>
+        <button type="button" data-project="ai-spring-festival">
+          <span class="project-no">P.02</span><img src="assets/images/projects/ai-spring-festival.jpg" alt="网易 AI 春晚"><strong>网易 AI 春晚《音舞次元串烧》</strong><small>全流程制作</small><i>↗</i>
+        </button>
+        <button type="button" data-project="cloud-tv">
+          <span class="project-no">P.03</span><span class="project-type-art cloud-art">YCTV<br>04/01</span><strong>“云村TV——愚人节特别节目”</strong><small>供应商沟通与制作协助</small><i>↗</i>
+        </button>
+        <button type="button" data-project="textbook">
+          <span class="project-no">P.04</span><span class="project-type-art book-art">AI ×<br>VARIETY</span><strong>大千影业 × 浙江大学 AI综艺教材</strong><small>项目负责人</small><i>↗</i>
+        </button>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div>
+        <p>CONTACT / RESUME</p>
+        <h2 id="contact-title">LET'S CONNECT</h2>
+        <p class="cn-contact">联系方式与简历</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:2768428813@qq.com"><span>EMAIL</span>2768428813@qq.com</a>
+        <a href="tel:+8615057071181"><span>PHONE</span>150 5707 1181</a>
+        <button type="button" data-copy="Yiwanchibubao0823"><span>WECHAT</span><b>Yiwanchibubao0823</b><small>COPY</small></button>
+        <a href="assets/docs/qiu-yuyue-resume.pdf" target="_blank" rel="noreferrer"><span>RESUME</span>VIEW PDF ↗</a>
+        <a href="assets/docs/qiu-yuyue-resume.pdf" download><span>DOWNLOAD</span>RESUME ↓</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>JOY2ENJOYEE — QIU YUYUE</span><span>PORTFOLIO / 2026</span></footer>
+
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-frame">
+      <header><span id="dialog-index">PROJECT FILE</span><button type="button" data-dialog-close aria-label="Close project">×</button></header>
+      <div class="dialog-body" id="dialog-body"></div>
+    </div>
+  </dialog>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
