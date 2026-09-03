@@ -481,7 +481,7 @@ a { color: inherit; }
 .cloud-art { background: var(--pink); color: white; }
 .book-art { background: var(--green); color: var(--ink); }
 .project-no { font-family: var(--font-mono); font-size: 11px; }
-.project-list strong { font-family: var(--font-display); font-size: 24px; }
+.project-list strong { font-family: var(--font-pixel); font-size: 24px; }
 .project-list small { font-size: 13px; }
 .project-list i { font-size: 24px; font-style: normal; }
 
