@@ -88,7 +88,7 @@ const projectContent = {
   },
   delulu: {
     index: 'AIGC_04 / DELULU',
-    html: `${title('AIGC MV', '《DELULU》MV', 'TEAM')} ${reserved('待替换为本人负责的裁剪片段')} ${summary('ROLE', '<p>团队作品。第一版保留个人负责片段入口，收到裁剪文件后直接替换。</p>')}`
+    html: `${title('AIGC MV', '《DELULU》MV', 'MY SEGMENT 01:00–03:20')} ${video('assets/video/delulu.mp4', 'assets/images/aigc/delulu.jpg', 'DELULU AIGC MV，本人负责 01:00–03:20')} ${summary('ROLE', '<p>团队作品，网页展示本人负责的 01:00–03:20 片段。</p>')}`
   },
   afterlike: {
     index: 'AIGC_05 / AFTERLIKE',
