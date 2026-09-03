@@ -129,7 +129,7 @@ const projectContent = {
   },
   'cloud-tv': {
     index: 'PROJECT_03 / YUN_CUN_TV',
-    html: `${title('APRIL FOOLS SPECIAL', '“云村TV——愚人节特别节目”', 'PRODUCTION SUPPORT')} ${reserved('OFFICIAL PAGE AVAILABLE')} ${summary('ROLE', '<p>协助项目负责人推进制作，主要负责与外部供应商沟通对接。</p>')}<a class="dialog-link" href="https://y.music.163.com/g/yida/act/0401YCTV/U_h4pkm98m6n?app_version=9.4.80&dlt=0846&userid=352385996&encryptUid=f757ccc1d858ca73b92395e2a866d336ddb68a60f40462d863a6ee896fc01b69&page=d56ce536a12e46eebcf06bf8ec0b3577" target="_blank" rel="noreferrer">VIEW OFFICIAL PAGE ↗</a>`
+    html: `${title('APRIL FOOLS SPECIAL', '“云村TV——愚人节特别节目”', 'PRODUCTION SUPPORT')} ${image('assets/images/projects/cloud-tv-official.jpg', '网易云音乐云村 TV 愚人节特别节目官方主视觉')} ${summary('ROLE', '<p>协助项目负责人推进制作，主要负责与外部供应商沟通对接。</p>')}<a class="dialog-link" href="https://y.music.163.com/g/yida/act/0401YCTV/U_h4pkm98m6n?app_version=9.4.80&dlt=0846&userid=352385996&encryptUid=f757ccc1d858ca73b92395e2a866d336ddb68a60f40462d863a6ee896fc01b69&page=d56ce536a12e46eebcf06bf8ec0b3577" target="_blank" rel="noreferrer">VIEW OFFICIAL PAGE ↗</a>`
   },
   textbook: {
     index: 'PROJECT_04 / AI_VARIETY_TEXTBOOK',
