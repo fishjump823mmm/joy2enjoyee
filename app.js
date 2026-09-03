@@ -4,7 +4,8 @@ const dialogIndex = document.querySelector('#dialog-index');
 const toast = document.querySelector('.toast');
 
 const directoryStage = document.querySelector('.directory-stage');
-const directoryItems = [...document.querySelectorAll('[data-directory-item]')];
+const directoryItems = [...document.querySelectorAll('[data-directory-item]')]
+  .sort((a, b) => Number(a.dataset.directoryItem) - Number(b.dataset.directoryItem));
 const directoryDots = [...document.querySelectorAll('[data-directory-dot]')];
 const wideDirectoryQuery = window.matchMedia('(min-width: 761px)');
 let activeDirectory = 0;

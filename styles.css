@@ -33,6 +33,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+main { display: flex; flex-direction: column; }
 body {
   margin: 0;
   color: var(--ink);
@@ -293,7 +294,12 @@ a { color: inherit; }
   .directory-card[data-directory-item]:hover { transform: translate(-50%, calc(-50% - 8px)) scale(1); }
 }
 
-.work-section { padding: 90px max(24px, calc((100vw - var(--max)) / 2)); border-top: 1px solid var(--ink); }
+.work-section { padding: 104px max(24px, calc((100vw - var(--max)) / 2)); border-top: 1px solid var(--ink); }
+.section-projects { order: 1; }
+.section-aigc { order: 2; }
+.section-video { order: 3; }
+.section-photo { order: 4; }
+.contact-section { order: 5; }
 .section-aigc { background: #f4f4f4; }
 .section-video { background: var(--paper); }
 .section-photo { background: #e9f6ff; }
@@ -580,10 +586,14 @@ footer {
   .directory-card.is-left:hover,
   .directory-card.is-center:hover,
   .directory-card.is-right:hover { transform: none; }
+  .directory-card[data-directory-item="0"] { order: 0; }
+  .directory-card[data-directory-item="1"] { order: 1; }
+  .directory-card[data-directory-item="2"] { order: 2; }
+  .directory-card[data-directory-item="3"] { order: 3; }
   .jar { transform: none; }
   .directory-dots { gap: 18px; margin-top: 2px; }
   .directory-dots button { width: 16px; height: 16px; }
-  .work-section { padding: 68px 16px; }
+  .work-section { padding: 76px 16px; }
   .section-heading { margin-bottom: 28px; }
   .section-heading h2 { font-size: 38px; }
   .section-heading h2 em { display: block; margin: 10px 0 0; font-size: 22px; }
