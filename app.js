@@ -104,7 +104,7 @@ const projectContent = {
   },
   'love-aigc': {
     index: 'AIGC_06 / LOVE_GUIDE_SEQUENCE',
-    html: `${title('AIGC SEQUENCE', '《恋爱撤回指南》AIGC片段', 'RESERVED')} ${reserved('待补充 AIGC 裁剪片段')} ${gallery([['assets/images/video/love-guide-2.jpg','恋爱撤回指南剧照一'],['assets/images/video/love-guide-3.jpg','恋爱撤回指南剧照二']], '')}`
+    html: `${title('AIGC SEQUENCE', '《恋爱撤回指南》AIGC片段', '01:55 / VIDEO')} ${video('assets/video/love-guide-aigc.mp4', 'assets/images/aigc/love-guide-aigc-cover.jpg', '恋爱撤回指南 AIGC 片段')}`
   },
   'love-guide': {
     index: 'VIDEO_01 / LOVE_WITHDRAWAL_GUIDE',
