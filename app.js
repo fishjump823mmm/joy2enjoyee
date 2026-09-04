@@ -88,7 +88,7 @@ const projectContent = {
   },
   'twin-realms': {
     index: 'AIGC_02 / TWIN_REALMS',
-    html: `${title('AIGC DIGITAL HUMAN MV', '《双生无界》', 'TEAM')} ${video('assets/video/twin-realms.mp4', 'assets/images/aigc/twin-realms.jpg', '双生无界 AIGC 数字人 MV')} ${summary('ROLE', '<p>负责约 01:00–02:30 的视觉段落：人物三视图、换装、场景生成与画面动态化。</p><p>音频由团队原创制作，本人仅参与少量协作。</p>')} ${gallery([['assets/images/aigc/twin-audio.png','双生无界音频制作流程']], '')}`
+    html: `${title('AIGC DIGITAL HUMAN MV', '《双生无界》', 'TEAM')} ${video('assets/video/twin-realms.mp4', 'assets/images/aigc/twin-realms-cover.jpg', '双生无界 AIGC 数字人 MV')} ${summary('ROLE', '<p>负责约 01:00–02:30 的视觉段落：人物三视图、换装、场景生成与画面动态化。</p><p>音频由团队原创制作，本人仅参与少量协作。</p>')} ${gallery([['assets/images/aigc/twin-audio.png','双生无界音频制作流程']], '')}`
   },
   plubble: {
     index: 'AIGC_03 / PLUBBLE',
@@ -96,7 +96,7 @@ const projectContent = {
   },
   delulu: {
     index: 'AIGC_04 / DELULU',
-    html: `${title('AIGC MV', '《DELULU》MV', 'TEAM')} ${reserved('待替换为本人负责的裁剪片段')} ${summary('ROLE', '<p>团队作品。第一版保留个人负责片段入口，收到裁剪文件后直接替换。</p>')}`
+    html: `${title('AIGC MV', '《DELULU》MV', 'TEAM')} ${image('assets/images/aigc/delulu-cover.jpg', 'DELULU MV 成片画面')} ${summary('ROLE', '<p>团队作品，本人负责 01:00–03:20 的视觉段落。</p>')}`
   },
   afterlike: {
     index: 'AIGC_05 / AFTERLIKE',
@@ -133,7 +133,7 @@ const projectContent = {
   },
   textbook: {
     index: 'PROJECT_04 / AI_VARIETY_TEXTBOOK',
-    html: `${title('INDUSTRY × ACADEMIA', '大千影业 × 浙江大学 AI综艺教材合作', 'PROJECT LEAD')}<div class="reserved-slot"><div><strong>AI × VARIETY</strong><span>DAQIAN PICTURES / ZHEJIANG UNIVERSITY</span></div></div>${summary('ROLE', '<p>牵头校企跨界合作，组织浙大团队赴北京、成都两地开展行业调研与前后期团队访谈，统筹前期沟通及 2026.02–2026.08 教材编撰推进。</p><p>目前编撰进入收尾阶段，预计 2027 年初出版。</p>')}`
+    html: `${title('INDUSTRY × ACADEMIA', '大千影业 × 浙江大学 AI综艺教材合作', 'PROJECT LEAD')}${summary('ROLE', '<p>牵头校企跨界合作，组织浙大团队赴北京、成都两地开展行业调研与前后期团队访谈，统筹前期沟通及 2026.02–2026.08 教材编撰推进。</p><p>目前编撰进入收尾阶段，预计 2027 年初出版。</p>')}`
   }
 };
 
