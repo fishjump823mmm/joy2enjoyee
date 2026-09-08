@@ -75,6 +75,7 @@ wideDirectoryQuery.addEventListener('change', () => setActiveDirectory(activeDir
 setActiveDirectory(0);
 
 const image = (src, alt = '') => `<img class="dialog-cover" src="${src}" alt="${alt}">`;
+const carousel = (items) => `<div class="dialog-carousel">${items.map(([src, alt]) => `<img src="${src}" alt="${alt}">`).join('')}</div>`;
 const video = (src, poster, label) => `<video class="dialog-video" controls playsinline preload="metadata" poster="${poster}" aria-label="${label}"><source src="${src}" type="video/mp4">当前浏览器无法播放该视频。</video>`;
 const gallery = (items, extra = '') => `<div class="dialog-gallery ${extra}">${items.map(([src, alt]) => `<img src="${src}" alt="${alt}" loading="lazy">`).join('')}</div>`;
 const title = (eyebrow, heading, tag) => `<div class="dialog-title-row"><div><p>${eyebrow}</p><h2 id="dialog-title">${heading}</h2></div><span class="dialog-tag">${tag}</span></div>`;
@@ -84,7 +85,7 @@ const reserved = (copy) => `<div class="reserved-slot"><div><strong>VIDEO SLOT</
 const projectContent = {
   taro: {
     index: 'AIGC_01 / TARO_ACCOUNT',
-    html: `${title('ACCOUNT OPERATION / AIGC PRODUCTION', '“桃乐 Taro”数字人账号', 'PERSONAL')}<img class="dialog-cover" src="assets/images/aigc/taro-guitar.jpg" alt="桃乐数字人弹吉他画面"><div class="dialog-stats"><div><strong>153 → 15,515</strong><span>FOLLOWERS</span></div><div><strong>1085.3W</strong><span>TOP VIDEO VIEWS</span></div><div><strong>1365W+</strong><span>30-DAY MATRIX VIEWS</span></div></div>${summary('ROLE', '<p>2026.02.25 左右接手，04.30 起量。除既有建模外，独立完成底图生成、Suno 翻唱、对口型、发布与账号运营。</p><p>通过 4–5 轮底图迭代、榜单热点判断、共鸣文案与评论区点歌机制推动账号增长。</p>')}${gallery([['assets/images/aigc/taro-data-1.jpg','桃乐账号数据截图一'],['assets/images/aigc/taro-data-2.jpg','桃乐账号数据截图二'],['assets/images/aigc/taro-data-3.jpg','桃乐账号数据截图三']], 'three')}<a class="dialog-link" href="https://canva.link/29fyhj4htagf1oo" target="_blank" rel="noreferrer">VIEW EXTENDED WORKS ↗</a>`
+    html: `${title('ACCOUNT OPERATION / AIGC PRODUCTION', '“桃乐 Taro”数字人账号', 'PERSONAL')}<img class="dialog-cover" src="assets/images/aigc/taro-guitar.jpg" alt="桃乐数字人弹吉他画面"><div class="dialog-stats"><div><strong>153 → 15,515</strong><span>FOLLOWERS</span></div><div><strong>1085.3W</strong><span>TOP VIDEO VIEWS</span></div><div><strong>1365W+</strong><span>30-DAY MATRIX VIEWS</span></div></div>${summary('ROLE', '<p>2026.02.25 左右接手，04.30 起量。除既有建模外，独立完成底图生成、Suno 翻唱、对口型、发布与账号运营。</p><p>通过 4–5 轮底图迭代、榜单热点判断、共鸣文案与评论区点歌机制推动账号增长。</p>')}${gallery([['assets/images/aigc/taro-data-1.jpg','桃乐账号数据截图一'],['assets/images/aigc/taro-data-2.jpg','桃乐账号数据截图二'],['assets/images/aigc/taro-data-3.jpg','桃乐账号数据截图三']], 'three')}<a class="dialog-link" href="https://v.douyin.com/zDf16fIEshI/" target="_blank" rel="noreferrer">点击此处跳转桃乐账号 ↗</a>`
   },
   'twin-realms': {
     index: 'AIGC_02 / TWIN_REALMS',
@@ -92,44 +93,41 @@ const projectContent = {
   },
   plubble: {
     index: 'AIGC_03 / PLUBBLE',
-    html: `${title('AIGC JEWELRY FILM', '《PLUBBLE》珠宝广告', 'TEAM / ORIGINAL CONCEPT')} ${video('assets/video/plubble.mp4', 'assets/images/aigc/plubble.jpg', 'PLUBBLE 珠宝广告')} ${summary('CONCEPT', '<p>原创“鸭嘴兽 PLU 环球收集灵性宝石”的核心概念，将不同地域的自然能量与文化转化为珠宝盲盒。</p>')} ${gallery([['assets/images/aigc/plubble-concept.png','PLUBBLE 原创概念页面']], '')}`
+    html: `${title('AIGC JEWELRY FILM', '《PLUBBLE》珠宝广告', 'TEAM / ORIGINAL CONCEPT')} ${video('assets/video/plubble.mp4', 'assets/images/aigc/covers/plubble-clean.jpg', 'PLUBBLE 珠宝广告')} ${summary('CONCEPT', '<p>原创“鸭嘴兽 PLU 环球收集灵性宝石”的核心概念，将不同地域的自然能量与文化转化为珠宝盲盒。</p>')} ${gallery([['assets/images/aigc/plubble-concept.png','PLUBBLE 原创概念页面']], '')}`
   },
   delulu: {
     index: 'AIGC_04 / DELULU',
-    html: `${title('AIGC MV', '《DELULU》MV', 'TEAM')} ${image('assets/images/aigc/delulu-cover.jpg', 'DELULU MV 成片画面')} ${summary('ROLE', '<p>团队作品，本人负责 01:00–03:20 的视觉段落。</p>')}`
+    html: `${title('AIGC MV', '《DELULU》MV', 'TEAM')} ${image('assets/images/aigc/covers/delulu-small-person.png', 'DELULU MV 成片画面')} ${summary('ROLE', '<p>团队作品，本人负责 01:00–03:20 的视觉段落。</p>')}`
   },
   afterlike: {
     index: 'AIGC_05 / AFTERLIKE',
-    html: `${title('ANIMAL ALL-STARS MV', '《AFTERLIKE》动物群星版', 'PERSONAL')} ${video('assets/video/afterlike.mp4', 'assets/images/aigc/afterlike.jpg', 'AFTERLIKE 动物群星版 MV')} ${summary('WORKFLOW', '<p>独立完成全部画面：Nano Banana 先生成场景、再加入动物；即梦完成对口型与图生视频；最后合成剪辑。音乐使用原曲升调版本。</p>')} ${gallery([['assets/images/aigc/afterlike-1.jpg','AFTERLIKE 画面一'],['assets/images/aigc/afterlike-2.jpg','AFTERLIKE 画面二'],['assets/images/aigc/afterlike-3.jpg','AFTERLIKE 画面三'],['assets/images/aigc/afterlike-4.jpg','AFTERLIKE 画面四'],['assets/images/aigc/afterlike-5.jpg','AFTERLIKE 画面五']], 'three')}`
+    html: `${title('ANIMAL ALL-STARS MV', '《AFTERLIKE》动物群星版', 'PERSONAL')} ${video('assets/video/afterlike.mp4', 'assets/images/aigc/covers/afterlike-clean.jpg', 'AFTERLIKE 动物群星版 MV')} ${summary('WORKFLOW', '<p>独立完成全部画面：Nano Banana 先生成场景、再加入动物；即梦完成对口型与图生视频；最后合成剪辑。音乐使用原曲升调版本。</p>')} ${gallery([['assets/images/aigc/afterlike-1.jpg','AFTERLIKE 画面一'],['assets/images/aigc/afterlike-2.jpg','AFTERLIKE 画面二'],['assets/images/aigc/afterlike-3.jpg','AFTERLIKE 画面三'],['assets/images/aigc/afterlike-4.jpg','AFTERLIKE 画面四'],['assets/images/aigc/afterlike-5.jpg','AFTERLIKE 画面五']], 'three')}`
   },
   'love-aigc': {
     index: 'AIGC_06 / LOVE_GUIDE_SEQUENCE',
-    html: `${title('AIGC SEQUENCE', '《恋爱撤回指南》AIGC片段', '01:55 / VIDEO')} ${video('assets/video/love-guide-aigc.mp4', 'assets/images/aigc/love-guide-aigc-cover.jpg', '恋爱撤回指南 AIGC 片段')}`
+    html: `${title('AIGC SEQUENCE', '《恋爱撤回指南》AIGC片段', '01:55 / VIDEO')} ${video('assets/video/love-guide-aigc.mp4', 'assets/images/aigc/covers/love-guide-clean.jpg', '恋爱撤回指南 AIGC 片段')}`
   },
   'love-guide': {
     index: 'VIDEO_01 / LOVE_WITHDRAWAL_GUIDE',
     html: `${title('ROMANTIC COMEDY', '《恋爱撤回指南》', '23:07 / VIDEO WORK')} ${video('assets/video/love-guide.mp4', 'assets/images/video/love-guide-cover.jpg', '恋爱撤回指南完整成片')} ${gallery([['assets/images/video/love-guide-2.jpg','恋爱撤回指南剧照二'],['assets/images/video/love-guide-3.jpg','恋爱撤回指南剧照三'],['assets/images/video/love-guide-4.jpg','恋爱撤回指南剧照四'],['assets/images/video/love-guide-5.jpg','恋爱撤回指南剧照五'],['assets/images/video/love-guide-6.jpg','恋爱撤回指南剧照六'],['assets/images/video/love-guide-7.jpg','恋爱撤回指南剧照七']], 'three')} ${summary('VIDEO', '<p>完整成片，可直接在线播放；AIGC 片段在 AIGC 分类中保留独立入口。</p>')}`
   },
-  'seeking-sound': { index: 'VIDEO_02 / SEEKING_THE_SOUND', html: `${title('ORIGINAL SHORT FILM', '《寻声》', '16:25 / 2025')} ${image('assets/images/video/seeking-sound.jpg', '寻声海报')} ${summary('ROLE', '<p>编剧 / 制片 / 演员</p>')}` },
-  'outside-theater': { index: 'VIDEO_03 / OUTSIDE_THE_THEATER', html: `${title('ORIGINAL SHORT FILM', '《剧场外》', 'TEAM')} ${image('assets/images/video/outside-theater.jpg', '剧场外画面')} ${summary('ROLE', '<p>美术：置景 / 妆造 / 道具</p>')}` },
-  finding: { index: 'VIDEO_04 / FINDING', html: `${title('ORIGINAL SHORT FILM', '《寻》', '14:24 / 2023')} ${image('assets/images/video/finding.jpg', '寻画面')} ${summary('ROLE', '<p>美术：置景 / 妆造 / 道具</p>')}` },
-  'hello-haining': { index: 'VIDEO_05 / HELLO_HAINING', html: `${title('PROMOTIONAL VIDEO', '《你好，海宁》', 'TEAM')} ${image('assets/images/video/hello-haining.jpg', '你好海宁画面')} ${summary('AWARD', '<p>海宁市文旅国际短视频大赛二等奖</p>')}` },
-  'little-red-flower': { index: 'VIDEO_06 / LITTLE_RED_FLOWER', html: `${title('IMITATION', '《送你一朵小红花》', '2023')} ${image('assets/images/video/little-red-flower.jpg', '送你一朵小红花仿拍画面')} ${summary('ROLE', '<p>美术：置景 / 妆造 / 道具</p>')}` },
-  'sweet-peach': { index: 'VIDEO_07 / SWEET_NOT_PEACH', html: `${title('ADVERTISEMENT', '《甜蜜，不“桃”走》', '00:54 / 2022')} ${image('assets/images/video/sweet-peach.jpg', '甜蜜不桃走画面')} ${summary('ROLE', '<p>策划 / 剪辑 / 特效制作</p>')}` },
-  coffee: { index: 'VIDEO_08 / COFFEE', html: `${title('ADVERTISEMENT', '《拒绝乏味 就喝咖位》', '00:53 / TEAM')} ${image('assets/images/video/coffee.jpg', '拒绝乏味就喝咖位画面')} ${summary('ROLE', '<p>团队作品 / 无明确分工</p>')}` },
-  'qingwen-kiss': { index: 'VIDEO_09 / QINGWEN_KISS', html: `${title('ADVERTISEMENT', '《一颗清瘟 一个亲吻》', '00:32 / PERSONAL')} ${image('assets/images/video/qingwen-kiss.jpg', '一颗清瘟一个亲吻画面')} ${summary('ROLE', '<p>独立完成。中国大学生广告艺术节学院奖 2023 春季征集大赛优秀奖。</p>')}` },
-  'dreams-come-true': { index: 'VIDEO_10 / DREAMS_COME_TRUE', html: `${title('INTERACTIVE VIDEO', '《美梦成真》', 'TEAM / 2021')} ${image('assets/images/video/dreams-come-true.jpg', '美梦成真互动视频')} ${summary('ROLE', '<p>团队作品 / 无明确分工</p>')}` },
+  'seeking-sound': { index: 'VIDEO_02 / SEEKING_THE_SOUND', html: `${title('ORIGINAL SHORT FILM', '《寻声》', '16:25 / 2025')} ${video('assets/video/seeking-sound.mp4', 'assets/images/video/seeking-sound.jpg', '寻声')} ${summary('ROLE', '<p>编剧 / 制片 / 演员</p>')}` },
+  'outside-theater': { index: 'VIDEO_03 / OUTSIDE_THE_THEATER', html: `${title('ORIGINAL SHORT FILM', '《剧场外》', 'TEAM')} ${video('assets/video/outside-theater.mp4', 'assets/images/video/outside-theater.jpg', '剧场外')} ${summary('ROLE', '<p>美术：置景 / 妆造 / 道具</p>')}` },
+  finding: { index: 'VIDEO_04 / FINDING', html: `${title('ORIGINAL SHORT FILM', '《寻》', '14:24 / 2023')} ${video('assets/video/finding.mp4', 'assets/images/video/finding.jpg', '寻')} ${summary('ROLE', '<p>美术：置景 / 妆造 / 道具</p>')}` },
+  'little-red-flower': { index: 'VIDEO_05 / LITTLE_RED_FLOWER', html: `${title('IMITATION', '《送你一朵小红花》', '2023')} ${video('assets/video/little-red-flower.mp4', 'assets/images/video/little-red-flower.jpg', '送你一朵小红花仿拍')} ${summary('ROLE', '<p>美术：置景 / 妆造 / 道具</p>')}` },
+  'sweet-peach': { index: 'VIDEO_06 / SWEET_NOT_PEACH', html: `${title('ADVERTISEMENT', '《甜蜜，不“桃”走》', '00:54 / 2022')} ${image('assets/images/video/sweet-peach.jpg', '甜蜜不桃走画面')} ${summary('ROLE', '<p>策划 / 剪辑 / 特效制作</p>')}` },
+  coffee: { index: 'VIDEO_07 / COFFEE', html: `${title('ADVERTISEMENT', '《拒绝乏味 就喝咖位》', '00:53 / TEAM')} ${video('assets/video/coffee.mp4', 'assets/images/video/coffee.jpg', '拒绝乏味就喝咖位')} ${summary('ROLE', '<p>团队作品 / 无明确分工</p>')}` },
   'practice-room': {
     index: 'PROJECT_01 / PRACTICE_ROOM_4',
-    html: `${title('TV PROGRAM', '《天赐的声音7》衍生节目《奇妙练歌房4》', 'EDITOR')} ${image('assets/images/projects/practice-room-1.jpg', '奇妙练歌房4现场')} ${summary('RESPONSIBILITY', '<p>第 2 期、第 9 期及卫视大屏精编版第 2 期责任编辑。</p><p>负责前期策划、艺人对接、台本与道具单、技术彩排、现场 K 歌及打分系统运行，并参与上线前审片与跨组需求对齐。</p>')} ${gallery([['assets/images/projects/practice-room-2.jpg','奇妙练歌房4现场二'],['assets/images/projects/practice-room-3.jpg','奇妙练歌房4现场三'],['assets/images/projects/practice-room-4.jpg','奇妙练歌房4现场四']], 'three')}<a class="dialog-link" href="https://zmtv.cztv.com/cmsh5-share/prod/cztv-tvPlay/index.html?pageId=20113744" target="_blank" rel="noreferrer">VIEW PROMO ↗</a>`
+    html: `${title('TV PROGRAM', '《天赐的声音7》衍生节目《奇妙练歌房4》', 'EDITOR')} ${carousel([['assets/images/projects/practice-room-2.jpg','奇妙练歌房4合照'],['assets/images/projects/practice-room-1.jpg','奇妙练歌房4现场']])} ${summary('RESPONSIBILITY', '<p>第 2 期、第 9 期及卫视大屏精编版第 2 期责任编辑。</p><p>负责前期策划、艺人对接、台本与道具单、技术彩排、现场 K 歌及打分系统运行，并参与上线前审片与跨组需求对齐。</p>')}<a class="dialog-link" href="https://zmtv.cztv.com/cmsh5-share/prod/cztv-tvPlay/index.html?pageId=20113744" target="_blank" rel="noreferrer">正片和预告片点击此处 ↗</a>`
   },
   'ai-spring-festival': {
     index: 'PROJECT_02 / AI_SPRING_FESTIVAL',
-    html: `${title('NETEASE AI SPRING FESTIVAL', '《音舞次元串烧》', 'FULL PIPELINE')} ${video('assets/video/ai-spring-festival.mp4', 'assets/images/projects/ai-spring-festival-original.jpg', '音舞次元串烧')} ${summary('ROLE', '<p>独立负责单节目全流程制作：围绕多首歌曲制作桃乐唱跳画面并完成串联剪辑。</p>')}<a class="dialog-link" href="https://y.music.163.com/g/yida/act/chunwan/K_ipyv1gy4j9?app_version=9.4.65&fromRN=1&market=search&userid=260640198&dlt=0846&page=dca30144380144169b722bd503c24e13" target="_blank" rel="noreferrer">VIEW OFFICIAL PAGE ↗</a>`
+    html: `${title('NETEASE AI SPRING FESTIVAL', '《音舞次元串烧》', 'FULL PIPELINE')} ${video('assets/video/ai-spring-festival.mp4', 'assets/images/projects/ai-spring-festival-original.jpg', '音舞次元串烧')} ${summary('ROLE', '<p>独立负责单节目全流程制作：围绕多首歌曲制作桃乐唱跳画面并完成串联剪辑。</p>')}<a class="dialog-link" href="https://y.music.163.com/g/yida/act/chunwan/K_ipyv1gy4j9?app_version=9.4.65&fromRN=1&market=search&userid=260640198&dlt=0846&page=dca30144380144169b722bd503c24e13" target="_blank" rel="noreferrer">点击此处跳转原活动链接 ↗</a>`
   },
   'cloud-tv': {
     index: 'PROJECT_03 / YUN_CUN_TV',
-    html: `${title('APRIL FOOLS SPECIAL', '“云村TV——愚人节特别节目”', 'PRODUCTION SUPPORT')} ${image('assets/images/projects/cloud-tv-official.jpg', '网易云音乐云村 TV 愚人节特别节目官方主视觉')} ${summary('ROLE', '<p>协助项目负责人推进制作，主要负责与外部供应商沟通对接。</p>')}<a class="dialog-link" href="https://y.music.163.com/g/yida/act/0401YCTV/U_h4pkm98m6n?app_version=9.4.80&dlt=0846&userid=352385996&encryptUid=f757ccc1d858ca73b92395e2a866d336ddb68a60f40462d863a6ee896fc01b69&page=d56ce536a12e46eebcf06bf8ec0b3577" target="_blank" rel="noreferrer">VIEW OFFICIAL PAGE ↗</a>`
+    html: `${title('APRIL FOOLS SPECIAL', '“云村TV——愚人节特别节目”', 'PRODUCTION SUPPORT')} ${image('assets/images/projects/cloud-tv-official.jpg', '网易云音乐云村 TV 愚人节特别节目官方主视觉')} ${summary('ROLE', '<p>协助项目负责人推进制作，主要负责与外部供应商沟通对接。</p>')}<a class="dialog-link" href="https://y.music.163.com/g/yida/act/0401YCTV/U_h4pkm98m6n?app_version=9.4.80&dlt=0846&userid=352385996&encryptUid=f757ccc1d858ca73b92395e2a866d336ddb68a60f40462d863a6ee896fc01b69&page=d56ce536a12e46eebcf06bf8ec0b3577" target="_blank" rel="noreferrer">点击此处跳转原活动链接 ↗</a>`
   },
   textbook: {
     index: 'PROJECT_04 / AI_VARIETY_TEXTBOOK',
